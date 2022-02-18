@@ -1,13 +1,95 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --clr-bg: #ffe2cc;
+  --clr-primary: #f5ba8e;
+  --clr-highlight: #ff9e54;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  background: var(--clr-bg);
+  overflow: hidden;
+}
+
+path {
+  fill: var(--clr-primary);
+  stroke: white;
+  stroke-width: 0.5px;
+  cursor: pointer;
+  transform: scale(1.25);
+}
+
+.map-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.info {
+  background: var(--clr-highlight);
+  color: white;
+  width: 90%;
+  height: 20vh;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-container {
+  color: white;
+  background: var(--clr-primary);
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+table {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+tr {
+  background: var(--clr-highlight);
+  font-size: 1.4rem;
+}
+
+th {
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.svg-map {
+  width: 50%;
+}
+
+.popup {
+  display: none;
+  color: white;
+  background:#ff8b33 ;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
